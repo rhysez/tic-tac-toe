@@ -1,7 +1,7 @@
 :root {
     --itemcolor: rgb(48, 48, 48);
     --bgcolor: snow;
-    --containercolor: rgb(151, 228, 252);
+    --containercolor: rgb(151, 215, 252);
 }
 
 body {
@@ -11,18 +11,28 @@ body {
     background-color: var(--bgcolor);
 }
 
+.headerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #header {
-    text-align: center;
-    color: var(--itemcolor);
+    color: var(--bgcolor);
+    box-shadow: 5px 5px var(--containercolor);
+    background-color: var(--itemcolor);
+    border-radius: 15px;
     font-size: 300%;
+    padding: 10px;
 }
 
 .buttons {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
-#startGame {
+.button {
     background-color: var(--containercolor);
     color: var(--bgcolor);
     width: 100px;
@@ -35,7 +45,8 @@ body {
     transition: all .2s ease-in-out;
 }
 
-#startGame:hover {
+
+.button:hover {
     box-shadow: 5px 5px var(--itemcolor);
     color: var(--itemcolor);
     border: solid 1px var(--itemcolor);
@@ -79,6 +90,7 @@ body {
 
 .cell {
     border: solid 2px var(--containercolor);
+    border-radius: 7.5px;
     background-color: var(--itemcolor);
     display: flex;
     justify-content: center;
