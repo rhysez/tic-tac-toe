@@ -32,12 +32,14 @@ body {
     box-shadow: 5px 5px rgb(202, 202, 202);
     font-weight: bold;
     font-size: larger;
+    transition: all .2s ease-in-out;
 }
 
 #startGame:hover {
-    box-shadow: 5px 5px rgb(243, 245, 112);
-    color: rgb(243, 245, 112);
-    border: solid 1px rgb(243, 245, 112);
+    box-shadow: 5px 5px var(--itemcolor);
+    color: var(--itemcolor);
+    border: solid 1px var(--itemcolor);
+    transform: scale(1.15);
     cursor: pointer;
 }
 
@@ -58,6 +60,13 @@ body {
     border-radius: 25px;
     background-color: var(--containercolor);
     box-shadow: 10px 15px rgb(202, 202, 202);
+    transition: all .2s ease-in-out;
+}
+
+#gameContainer:hover {
+    box-shadow: 10px 15px var(--itemcolor);
+    border: solid 2px var(--itemcolor);
+    transform: scale(1.05);
 }
 
 #gameBoard {
