@@ -30,13 +30,14 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    gap: 50px;
 }
 
 .button {
     background-color: var(--containercolor);
     color: var(--bgcolor);
     width: 100px;
-    height: 40px;
+    height: 50px;
     border: solid 1px rgb(202, 202, 202);
     border-radius: 10px;
     box-shadow: 5px 5px rgb(202, 202, 202);
