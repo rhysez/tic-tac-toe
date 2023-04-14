@@ -73,6 +73,16 @@ span {
     cursor: pointer;
 }
 
+#restartContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#restart {
+    width: 140px;
+}
+
 .playerName {
     border-radius: 5px;
     border: none;
