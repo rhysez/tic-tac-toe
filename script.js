@@ -1,7 +1,9 @@
 const buttonPlayerX = document.querySelector('#X');
 const buttonPlayerO = document.querySelector('#O');
 const displayBoard = document.querySelector('#gameBoard');
-const cell = document.querySelector('.cell');
+const gameContainer = document.querySelector('#gameContainer');
+const header = document.querySelector('#header');
+const cell = document.querySelectorAll('.cell');
 
 const playerNameX = document.querySelector('#playerNameX');
 const playerNameO = document.querySelector('#playerNameO');
@@ -50,8 +52,31 @@ const gameBoard = (() => {
     })
 
     function checkWin(){
-        // will check if player has won
-    }
+        if (board[0].textContent === "X" && board[3].textContent === "X" && board[6].textContent === "X"
+         || board[1].textContent === "X" && board[4].textContent === "X" && board[7].textContent === "X"
+         || board[2].textContent === "X" && board[5].textContent === "X" && board[8].textContent === "X"
+         || board[0].textContent === "X" && board[1].textContent === "X" && board[2].textContent === "X"
+         || board[3].textContent === "X" && board[4].textContent === "X" && board[5].textContent === "X"
+         || board[6].textContent === "X" && board[7].textContent === "X" && board[8].textContent === "X"
+         || board[0].textContent === "X" && board[4].textContent === "X" && board[8].textContent === "X"
+         || board[2].textContent === "X" && board[4].textContent === "X" && board[6].textContent === "X"){
+            gameContainer.style.backgroundColor = "lightgreen";
+            header.textContent = "X Wins!";
+            header.style.color = "lightgreen";
+
+        } else if ((board[0].textContent === "O" && board[3].textContent === "O" && board[6].textContent === "O"
+                 || board[1].textContent === "O" && board[4].textContent === "O" && board[7].textContent === "O"
+                 || board[2].textContent === "O" && board[5].textContent === "O" && board[8].textContent === "O"
+                 || board[0].textContent === "O" && board[1].textContent === "O" && board[2].textContent === "O"
+                 || board[3].textContent === "O" && board[4].textContent === "O" && board[5].textContent === "O"
+                 || board[6].textContent === "O" && board[7].textContent === "O" && board[8].textContent === "O"
+                 || board[0].textContent === "O" && board[4].textContent === "O" && board[8].textContent === "O"
+                 || board[2].textContent === "O" && board[4].textContent === "O" && board[6].textContent === "O")){
+                    gameContainer.style.backgroundColor = "lightgreen";
+                    header.textContent = "O Wins!";
+                    header.style.color = "lightgreen";
+                 }
+    };
 
     return { board };
 })();
