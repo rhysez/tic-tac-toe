@@ -4,6 +4,7 @@ const displayBoard = document.querySelector('#gameBoard');
 const gameContainer = document.querySelector('#gameContainer');
 const header = document.querySelector('#header');
 const cell = document.querySelectorAll('.cell');
+const restartGame = document.querySelector('#restart');
 
 const playerNameX = document.querySelector('#playerNameX');
 const playerNameO = document.querySelector('#playerNameO');
@@ -83,6 +84,14 @@ const gameBoard = (() => {
                     }
                  }
     };
+
+    function restart(){
+        window.location.reload();
+    }
+
+    restartGame.addEventListener('click', () => {
+        restart();
+    })
 
     return { board };
 })();
