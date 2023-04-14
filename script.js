@@ -22,12 +22,20 @@ const gameBoard = (() => {
         const cell = document.createElement('div');
         cell.classList.add('cell');
         displayBoard.appendChild(cell);
+        cell.addEventListener('click', () => {
+            if (game.activePlayer === game.player1) {
+                cell.textContent = "X";
+            } else if (game.activePlayer === game.player2) {
+                cell.textContent = "O";
+            }
+        })
     })
 
     return { board };
 })();
 
 // decides who is currently playing based on button clicked
+// holds information about both players
 const game = ((activePlayer) => {
     const player1 = createPlayer('Player 1', 'X');
     const player2 = createPlayer('Player 2', 'O');
