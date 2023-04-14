@@ -103,6 +103,7 @@ span {
     justify-content: center;
     margin-top: 20px;
     font-weight: bold;
+    animation: fadeIn 2s;
 }
 
 #container {
