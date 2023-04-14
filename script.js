@@ -31,6 +31,14 @@ const gameBoard = (() => {
         })
     })
 
+    buttonSubmitNameX.addEventListener('click', () => {
+        playerNameX.style.backgroundColor = 'var(--containercolor)'
+    })
+
+    buttonSubmitNameO.addEventListener('click', () => {
+        playerNameO.style.backgroundColor = 'var(--containercolor)'
+    })
+
     return { board };
 })();
 
