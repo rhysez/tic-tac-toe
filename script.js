@@ -14,30 +14,44 @@ const createPlayer = (name, marker) => {
 
 const gameBoard = (() => {
     let board = []
-    for (i = 0; i < 9; i++) {
-        board.push("X");
-    }
+    let cellId = 1;
 
-    board.forEach((item) => {
+    for (i = 0; i < 9; i++) {
         const cell = document.createElement('div');
         cell.classList.add('cell');
+        cell.id = cellId++;
         displayBoard.appendChild(cell);
-        cell.addEventListener('click', () => {
-            if (game.activePlayer === game.player1) {
-                cell.textContent = "X";
-            } else if (game.activePlayer === game.player2) {
-                cell.textContent = "O";
-            }
+        board.push(cell);
+        
+        board.forEach((item, index) => {
+            cell.addEventListener('click', () => {
+                if (game.activePlayer === game.player1) {
+                    cell.textContent = "X";
+                    checkWin();
+    
+                } else if (game.activePlayer === game.player2) {
+                    cell.textContent = "O";
+                    checkWin();
+                }
+            })
         })
-    })
+    }
+
+    
 
     buttonSubmitNameX.addEventListener('click', () => {
         playerNameX.style.backgroundColor = 'var(--containercolor)'
+        playerNameX.style.boxShadow = '5px 5px var(--itemcolor)'
     })
 
     buttonSubmitNameO.addEventListener('click', () => {
         playerNameO.style.backgroundColor = 'var(--containercolor)'
+        playerNameO.style.boxShadow = '5px 5px var(--itemcolor)'
     })
+
+    function checkWin(){
+        // will check if player has won
+    }
 
     return { board };
 })();
