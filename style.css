@@ -78,6 +78,8 @@ span {
     border: none;
     height: 30px;
     font-size: medium;
+    font-weight: bold;
+    text-align: center;
     box-shadow: 5px 5px rgb(202, 202, 202);
     animation: fadeIn 2s;
 }
