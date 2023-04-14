@@ -61,8 +61,11 @@ const gameBoard = (() => {
          || board[0].textContent === "X" && board[4].textContent === "X" && board[8].textContent === "X"
          || board[2].textContent === "X" && board[4].textContent === "X" && board[6].textContent === "X"){
             gameContainer.style.backgroundColor = "lightgreen";
-            header.textContent = "X Wins!";
             header.style.color = "lightgreen";
+            header.textContent =  `${playerNameX.value} wins!`;
+            if (playerNameX.value === ""){
+                header.textContent = "O wins!"
+            }
 
         } else if ((board[0].textContent === "O" && board[3].textContent === "O" && board[6].textContent === "O"
                  || board[1].textContent === "O" && board[4].textContent === "O" && board[7].textContent === "O"
@@ -73,8 +76,11 @@ const gameBoard = (() => {
                  || board[0].textContent === "O" && board[4].textContent === "O" && board[8].textContent === "O"
                  || board[2].textContent === "O" && board[4].textContent === "O" && board[6].textContent === "O")){
                     gameContainer.style.backgroundColor = "lightgreen";
-                    header.textContent = "O Wins!";
                     header.style.color = "lightgreen";
+                    header.textContent = `${playerNameO.value} wins!`; 
+                    if (playerNameO.value === ""){
+                        header.textContent = "O wins!"
+                    }
                  }
     };
 
