@@ -28,11 +28,12 @@ const gameBoard = (() => {
         
         board.forEach((item, index) => {
             cell.addEventListener('click', () => {
-                if (game.activePlayer === game.player1) {
+                if (game.activePlayer === game.player1 && cell.textContent === "") {
                     cell.textContent = "X";
                     checkWin();
-    
-                } else if (game.activePlayer === game.player2) {
+                }
+
+                if (game.activePlayer === game.player2 && cell.textContent === "") {
                     cell.textContent = "O";
                     checkWin();
                 }
