@@ -66,7 +66,7 @@ const gameBoard = (() => {
             header.style.color = "lightgreen";
             header.textContent =  `${playerNameX.value} wins!`;
             if (playerNameX.value === ""){
-                header.textContent = "O wins!"
+                header.textContent = "X wins!"
             }
 
         } else if ((board[0].textContent === "O" && board[3].textContent === "O" && board[6].textContent === "O"
